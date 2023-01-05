@@ -1,7 +1,7 @@
 FROM python:3.7 as builder
 RUN mkdir /install
 WORKDIR /install
-RUN pip install --install-option="--prefix=/install" pipenv
+RUN pip install --config-settings --install-option="--prefix=/install" pipenv
 
 # Final image:
 # if slim does not work change it to python:3.7
